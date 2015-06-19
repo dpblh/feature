@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>This's simple project <%= projectName %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css assets/app.css -->
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="assets/app.css">
+  <!-- endbuild -->
+
+</head>
+<body ng-app="rbt.<%= projectName %>" ng-controller="Main">
+<div class="container-fluid" ui-view>
+
+</div>
+<!-- build:js assets/app.js -->
+<script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="../bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+<!-- include: "type": "js", "basePath": "tmp", "files": ["../app/**/*.module.js", "../app/**/*.service.js", "../app/**/*.config.js", "../app/**/*.routes.js", "../app/**/*.constant.js", "../app/**/*.controller.js", "../app/**/*.directive.js", "../app/**/*.run.js", "../app/**/*.filter.js"] -->
+<!-- endbuild -->
+
+</body>
+
+</html>

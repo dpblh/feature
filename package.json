@@ -1,0 +1,16 @@
+{
+  "name": "generator-name",
+  "version": "0.1.0",
+  "description": "",
+  "files": [
+    "app",
+    "router"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "mem-fs-editor": "^2.0.0",
+    "yeoman-generator": "^0.20.1"
+  }
+}
