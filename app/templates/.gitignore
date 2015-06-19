@@ -5,5 +5,4 @@ bower_components/
 /assets/
 .tmp
 dist
-.DS_Store
-../../.idea
+.idea/
