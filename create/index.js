@@ -22,7 +22,7 @@ module.exports = generators.Base.extend({
      */
     this._registerAction('directive', function() {
       this._copyTpl('directive/directive.directive.js', 'app/directives/' + this.name.toDash() + '/' + this.name.toDash() + '.directive.js');
-      this._copyTpl('directive/directive.html', 'app/directives/' + this.name.toDash() + '/' + this.name.toDash() + '.html');
+      this._copyTpl('directive/directive.html', 'app/directives/' + this.name.toDash() + '/' + this.name.toDash() + '.tpl.html');
       this._copyTpl('directive/directive.less', 'app/directives/' + this.name.toDash() + '/' + this.name.toDash() + '.less');
     }.bind(this));
 

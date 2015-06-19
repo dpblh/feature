@@ -7,10 +7,10 @@
     "create"
   ],
   "keywords": [
-    "by-feature"
+    "by-feature",
+    "bayurov"
   ],
   "dependencies": {
-    "mem-fs-editor": "^2.0.0",
     "yeoman-generator": "^0.20.1"
   }
 }

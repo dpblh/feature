@@ -31,7 +31,8 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "load-grunt-config": "^0.16.0",
     "protractor": "^1.6.1",
-    "shelljs": "^0.2.6"
+    "shelljs": "^0.2.6",
+    "grunt-html2js": "^0.3.2"
   },
   "dependencies": {
     "time-grunt": "^1.0.0"

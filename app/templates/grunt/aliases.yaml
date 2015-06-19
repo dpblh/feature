@@ -16,13 +16,12 @@ develop:
     - 'includeSource'
     - 'buildStyle'
     - 'copy:html'
-    - 'copy:templates'
 
 production:
   description: 'Production build'
   tasks:
     - 'clean'
-    - 'copy:templates'
+    - 'html2js'
     - 'buildStyle'
     - 'includeSource'
     - 'useminPrepare'

@@ -5,7 +5,7 @@ angular.module('rbt.directives').directive('rbt<%= name.capitalize() %>', /*@ngI
     scope: {
 
     },
-    templateUrl: './<%= name.toDash() %>.html',
+    templateUrl: '../app/directives/<%= name.toDash() %>/<%= name.toDash() %>.tpl.html',
     link: function(scope, element, attrs) {
 
     }
