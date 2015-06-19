@@ -3,5 +3,5 @@ angular.module('rbt.services').provider('<%= name.toDash() %>', /*@ngInject*/fun
 
   this.$get = function () {
 
-  }
+  };
 });

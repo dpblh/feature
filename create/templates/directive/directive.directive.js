@@ -9,5 +9,5 @@ angular.module('rbt.directives').directive('rbt<%= name.capitalize() %>', /*@ngI
     link: function(scope, element, attrs) {
 
     }
-  }
+  };
 });
