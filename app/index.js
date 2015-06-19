@@ -1,19 +1,19 @@
 var generators = require('yeoman-generator');
 require('../string-utils');
+
 module.exports = generators.Base.extend({
-  prompting: function () {
-    var done = this.async();
-    this.prompt({
-        type: 'input',
-        name: 'name',
-        message: 'Your project name'
-      },
-      function (answers) {
-        this.config.set('projectName', answers.name.toDash());
-        done();
-      }.bind(this));
+
+  constructor: function() {
+    generators.Base.apply(this, arguments);
+
+    this.argument('projectName', { type: String, required: true, desc: 'Project name' });
+
   },
+
   writing: function () {
+
+    this.config.path = this.destinationRoot() +'\\' + this.projectName.toDash() + '\\.yo-rc.json';
+    this.config.set('projectName', this.projectName.toDash());
 
     /* Create index.html */
     this._copyTpl('app/index.html');

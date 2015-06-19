@@ -8,9 +8,6 @@ module.exports = generators.Base.extend({
   constructor: function() {
     generators.Base.apply(this, arguments);
 
-    this.argument('actionName', { type: String, required: true, desc: 'The action you want to execute' });
-    this.argument('name', { type: String, required: true, desc: 'Param for code generate' });
-
     /**
      * Create module structure
      */
@@ -50,6 +47,12 @@ module.exports = generators.Base.extend({
       this._copyTpl('provider/provider.service.js', 'app/services/' + this.name.toDash() + '.service.js');
     }.bind(this));
 
+    /**
+     * Register params
+     */
+    this.argument('actionName', { type: String, required: true, desc: 'The action you want to execute. Available action: ' + Object.keys(this.actions).join(', ') });
+    this.argument('name', { type: String, required: true, desc: 'Param for code generate' });
+
   },
 
   _registerAction: function(actionName, action) {
@@ -58,15 +61,22 @@ module.exports = generators.Base.extend({
 
   writing: function () {
 
+    if (!this.name.match(/^[a-z]{1}[a-zA-Z]+$/)) {
+      throw new Error('It can only be ^[a-z]{1}[a-zA-Z]+$');
+    }
+
+    if (!this.actions[this.actionName]) {
+      throw new Error('Action does not exist');
+    }
+
     this.actions[this.actionName]();
 
   },
 
   _copyTpl: function(src, dist) {
-    var projectName = this.config.get('projectName');
     this.fs.copyTpl(
       this.templatePath(src),
-      this.destinationPath(projectName + '/' + dist),
+      this.destinationPath(dist),
       {name: this.name}
     );
   }

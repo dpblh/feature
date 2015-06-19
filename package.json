@@ -1,13 +1,13 @@
 {
-  "name": "generator-name",
+  "name": "generator-feature",
   "version": "0.1.0",
   "description": "",
   "files": [
     "app",
-    "router"
+    "create"
   ],
   "keywords": [
-    "yeoman-generator"
+    "by-feature"
   ],
   "dependencies": {
     "mem-fs-editor": "^2.0.0",
